@@ -584,8 +584,6 @@ stock Float:TF_GetCloakLevel(client)
 		return 0.0;
 }
 
-#define MAX_MESSAGE_LENGTH 250
-
 /**
  * Prints a message in the chat area with [SmashBros] pre-appended.
  * Support color tags: {default}, {green}, {lightgreen}, {red}, {blue}, {olive}.
@@ -605,8 +603,8 @@ stock SB_ChatMessage(client, const String:szMessage[], any:...)
 			{
 				SetGlobalTransTarget(i);
 				VFormat(szBuffer, sizeof(szBuffer), szMessage, 3);
-				Format(szBuffer, sizeof(szBuffer), "{green}[SmashBros]{default} %s", szBuffer);
-				CPrintToChat2(i, szBuffer);
+				Format(szBuffer, sizeof(szBuffer), "{green}[%s]{default} %s", GAME_TITLE, szBuffer);
+				CPrintToChat(i, szBuffer);
 			}
 		}
 	}
@@ -615,8 +613,8 @@ stock SB_ChatMessage(client, const String:szMessage[], any:...)
 		decl String:szBuffer[MAX_MESSAGE_LENGTH];
 		SetGlobalTransTarget(client);
 		VFormat(szBuffer, sizeof(szBuffer), szMessage, 3);
-		Format(szBuffer, sizeof(szBuffer), "{green}[SmashBros]{default} %s", szBuffer);
-		CPrintToChat2(client, szBuffer);
+		Format(szBuffer, sizeof(szBuffer), "{green}[%s]{default} %s", GAME_TITLE, szBuffer);
+		CPrintToChat(client, szBuffer);
 	}
 }
 

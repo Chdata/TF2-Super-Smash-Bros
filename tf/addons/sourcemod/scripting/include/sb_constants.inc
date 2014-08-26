@@ -19,6 +19,7 @@
  * this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#define GAME_TITLE "SmashBros"
 
 #define PLUGIN_VERSION "1.2.0_alpha"
 
