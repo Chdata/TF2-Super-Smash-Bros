@@ -71,7 +71,7 @@ public OnPluginStart()
 	PyroSB_ChanceModifierCvar=CreateConVar("sb_pyro_chancemod","0.500","Float 0.0 - 1.0");
 	HeavySB_ChanceModifierCvar=CreateConVar("sb_heavy_chancemod","0.666","Float 0.0 - 1.0");
 
-	//HookEvent("player_hurt", EventPlayerHurt);   ERRORS ON STACK.. TOOK THE NEW CODE FROM WAR3SOURCE 2.0 INSTEAD:
+	//HookEvent("player_hurt", EventPlayerHurt);   ERRORS ON STACK..
 
 	ownerOffset = FindSendPropInfo("CBaseObject", "m_hBuilder");
 }

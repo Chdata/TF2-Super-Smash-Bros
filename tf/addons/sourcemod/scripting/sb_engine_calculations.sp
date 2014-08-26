@@ -266,7 +266,7 @@ public Action:Timer_Uber_Regen(Handle:timer, any:user)
 		}
 
 		new HealVictim = TF2_GetHealingTarget(i);
-		//if (ValidPlayer(HealVictim, true) && !War3_IsUbered(healer))
+		//if (ValidPlayer(HealVictim, true) && !SB_IsUbered(healer))
 		if (SB_ValidPlayer(HealVictim, true))
 		{
 			//SB_DP("healer %d ... healer victim %d",i,HealVictim);
@@ -329,7 +329,7 @@ public Action:Event_Player_BuiltObject(Handle:event, const String:name[], bool:d
 			//}
 			if((GetEntProp(index, Prop_Send, "m_bBuilding") == 1 ))
 				SetEntProp(index, Prop_Send, "m_iHighestUpgradeLevel", 1);
-			//War3_CooldownMGR(client,UpgradeSentryCooldowns[skill_level],thisRaceID,ABILITY_UPGRADE_SENTRY,true,true);
+			//SB_CooldownMGR(client,UpgradeSentryCooldowns[skill_level],thisRaceID,ABILITY_UPGRADE_SENTRY,true,true);
 
 			CreateTimer(1.0, SkinFix, index);
 		}

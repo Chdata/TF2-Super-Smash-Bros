@@ -263,7 +263,7 @@ public  Action:SB_PlayerDeathEvent(Handle:event,const String:name[],bool:dontBro
 		if (deathFlags & 32) //TF_DEATHFLAG_DEADRINGER
 		{
 			deadringereath=true;
-			//PrintToChat(client,"war3 debug: dead ringer kill");
+			//PrintToChat(client,"SB debug: dead ringer kill");
 			/*
 			new assister=GetClientOfUserId(GetEventInt(event,"assister"));
 

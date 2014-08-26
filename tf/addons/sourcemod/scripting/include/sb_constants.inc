@@ -67,7 +67,7 @@
 #define DMG_BUCKSHOT				(1 << 29)
 
 
-// The following are color presets for the War3_FlashScreen function
+// The following are color presets for the SB_FlashScreen function
 #define RGBA_COLOR_RED		{255,0,0,4}
 #define RGBA_COLOR_GREEN	{0,255,0,3}
 #define RGBA_COLOR_BLUE		{0,0,255,3}
@@ -85,7 +85,7 @@
 #define RGBA_COLOR_BROWN	{139,69,19,3}
 #define RGBA_COLOR_VIOLET	{238,130,238,3}
 
-// The following are from the SourceSDK, used for the optional flags field of War3_FlashScreen
+// The following are from the SourceSDK, used for the optional flags field of SB_FlashScreen
 #define FFADE_IN			0x0001		// Just here so we don't pass 0 into the function, YOUR SCREEN DECAYS AND YOU SEE CLEARLY SLOWLY
 #define FFADE_OUT			0x0002		// Fade out (not in)
 #define FFADE_MODULATE		0x0004		// Modulate (don't blend)
