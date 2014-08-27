@@ -69,6 +69,8 @@ public bool:SBInitNativesForwards()
 
 public OnPluginStart()
 {
+	CreateConVar("Super_Smash_Bros_version", PLUGIN_VERSION, "Smash Bros version.", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY|FCVAR_DONTRECORD);
+
 	sb_round_time = CreateConVar("sb_roundtime", "120.0", "Round Time in Seconds", FCVAR_PLUGIN);
 	sb_lives = CreateConVar("sb_lives", "3", "Amount of lives a player starts with.", FCVAR_PLUGIN);
 
