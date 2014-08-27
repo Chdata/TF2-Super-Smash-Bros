@@ -138,7 +138,7 @@ public OnSB_TakeDmgAllPre(victim,attacker,Float:damage)
 		SB_SetPlayerProp(victim,iDamage,newdamage);
 		//}
 		//SB_DP("valid attacker 0.0");
-		SB_DamageModPercent(0.0);
+		SB_DamageModPercent(0.01);
 		//passcheck++;
 	}
 	else if(SB_ValidPlayer(attacker) && attacker==victim)
@@ -149,7 +149,7 @@ public OnSB_TakeDmgAllPre(victim,attacker,Float:damage)
 		SB_SetPlayerProp(victim,iDamage,newdamage);
 		//}
 		//SB_DP("valid attacker 0.0");
-		SB_DamageModPercent(0.0);
+		SB_DamageModPercent(0.01);
 		//passcheck++;
 	}
 
@@ -210,6 +210,9 @@ public OnSBEventPostHurt(victim,attacker,dmgamount,const String:weapon[32])
 		//new Float:totaldamage = float(newdamage)*4;
 
 		new Float:totaldamage = float(SB_GetPlayerProp(victim,iDamage))*6;
+
+		new MaxHealth = GetEntProp(victim, Prop_Data, "m_iMaxHealth");
+		SB_SetHealth(victim, MaxHealth);
 		//new Float:stren = FloatMul(float(totaldamage),0.1);
 		//new Float:stren = float(dmgamount);
 
